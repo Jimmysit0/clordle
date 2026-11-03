@@ -4,6 +4,8 @@ Wordle, but every answer is a Clojure function!
 
 Play it at **[jimmysit0.github.io/clordle](https://jimmysit0.github.io/clordle/)**
 
+https://github.com/user-attachments/assets/bdb3674b-3ef5-4cf6-871f-496ff1b8958d
+
 You get six tries to guess a four-letter function name, and your guesses have
 to be real functions too. Therefore, `when` and `defn` don't count, as they're
 macros (the game will tell you so). If you get stuck, a hint shows up after
@@ -56,5 +58,3 @@ The last run (November 2, 2026, on Clojure 1.12.6) went like this:
 | also confirmed by the JVM | 1221 |
 | names made only of letters | 375 |
 | **most common length** | **4 letters, 85 functions** (5 letters: 69, 6 letters: 66) |
-
-## The game
