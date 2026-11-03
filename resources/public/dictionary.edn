@@ -1,0 +1,580 @@
+{:source "https://clojuredocs.org/clojuredocs-export.json",
+ :generated "2026-11-03T12:35:29.866548Z",
+ :clojure "1.12.6",
+ :length 4,
+ :histogram {1 1, 2 4, 3 42, 4 85, 5 69, 6 66, 7 47, 8 24, 9 16, 10 13, 11 6, 12 1, 13 1},
+ :summary
+ {:clojuredocs-vars 1572,
+  :clojuredocs-functions 1225,
+  :verified-functions 1221,
+  :mismatches 9,
+  :letter-only-names 375},
+ :words
+ [{:name "acos",
+   :ns "clojure.math",
+   :other-ns [],
+   :arglists ["a"],
+   :doc
+   "Returns the arc cosine of a, in the range 0.0 to pi.\n  If a is ##NaN or |a|>1 => ##NaN\n  See: https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html#acos-double-",
+   :href "/clojure.math/acos"}
+  {:name "aget",
+   :ns "clojure.core",
+   :other-ns [],
+   :arglists ["array idx" "array idx & idxs"],
+   :doc "Returns the value at the index/indices. Works on Java arrays of all\n  types.",
+   :href "/clojure.core/aget"}
+  {:name "aset",
+   :ns "clojure.core",
+   :other-ns [],
+   :arglists ["array idx val" "array idx idx2 & idxv"],
+   :doc "Sets the value at the index/indices. Works on Java arrays of\n  reference types. Returns val.",
+   :href "/clojure.core/aset"}
+  {:name "asin",
+   :ns "clojure.math",
+   :other-ns [],
+   :arglists ["a"],
+   :doc
+   "Returns the arc sine of an angle, in the range -pi/2 to pi/2.\n  If a is ##NaN or |a|>1 => ##NaN\n  If a is zero => zero with the same sign as a\n  See: https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html#asin-double-",
+   :href "/clojure.math/asin"}
+  {:name "atan",
+   :ns "clojure.math",
+   :other-ns [],
+   :arglists ["a"],
+   :doc
+   "Returns the arc tangent of a, in the range of -pi/2 to pi/2.\n  If a is ##NaN => ##NaN\n  If a is zero => zero with the same sign as a\n  See: https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html#atan-double-",
+   :href "/clojure.math/atan"}
+  {:name "atom",
+   :ns "clojure.core",
+   :other-ns [],
+   :arglists ["x" "x & options"],
+   :doc
+   "Creates and returns an Atom with an initial value of x and zero or\n  more options (in any order):\n\n  :meta metadata-map\n\n  :validator validate-fn\n\n  If metadata-map is supplied, it will become the metadata on the\n  atom. validate-fn must be nil or a side-effect-free fn of one\n  argument, which will be passed the intended new state on any state\n  change. If the new state is unacceptable, the validate-fn should\n  return false or throw an exception.",
+   :href "/clojure.core/atom"}
+  {:name "bean",
+   :ns "clojure.core",
+   :other-ns [],
+   :arglists ["x"],
+   :doc
+   "Takes a Java object and returns a read-only implementation of the\n  map abstraction based upon its JavaBean properties.",
+   :href "/clojure.core/bean"}
+  {:name "byte",
+   :ns "clojure.core",
+   :other-ns [],
+   :arglists ["x"],
+   :doc "Coerce to byte",
+   :href "/clojure.core/byte"}
+  {:name "cast",
+   :ns "clojure.core",
+   :other-ns [],
+   :arglists ["c x"],
+   :doc "Throws a ClassCastException if x is not a c, else returns x.",
+   :href "/clojure.core/cast"}
+  {:name "cbrt",
+   :ns "clojure.math",
+   :other-ns [],
+   :arglists ["a"],
+   :doc
+   "Returns the cube root of a.\n  If a is ##NaN => ##NaN\n  If a is ##Inf or ##-Inf => a\n  If a is zero => zero with sign matching a\n  See: https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html#cbrt-double-",
+   :href "/clojure.math/cbrt"}
+  {:name "ceil",
+   :ns "clojure.math",
+   :other-ns [],
+   :arglists ["a"],
+   :doc
+   "Returns the smallest double greater than or equal to a, and equal to a\n  mathematical integer.\n  If a is ##NaN or ##Inf or ##-Inf or already equal to an integer => a\n  See: https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html#ceil-double-",
+   :href "/clojure.math/ceil"}
+  {:name "chan",
+   :ns "clojure.core.async",
+   :other-ns [],
+   :arglists ["" "buf-or-n" "buf-or-n xform" "buf-or-n xform ex-handler"],
+   :doc
+   "Creates a channel with an optional buffer, an optional transducer\n  (like (map f), (filter p) etc or a composition thereof), and an\n  optional exception-handler.  If buf-or-n is a number, will create\n  and use a fixed buffer of that size. If a transducer is supplied a\n  buffer must be specified. ex-handler must be a fn of one argument -\n  if an exception occurs during transformation it will be called with\n  the Throwable as an argument, and any non-nil return value will be\n  placed in the channel.",
+   :href "/clojure.core.async/chan"}
+  {:name "char",
+   :ns "clojure.core",
+   :other-ns [],
+   :arglists ["x"],
+   :doc "Coerce to char",
+   :href "/clojure.core/char"}
+  {:name "comp",
+   :ns "clojure.core",
+   :other-ns [],
+   :arglists ["" "f" "f g" "f g & fs"],
+   :doc
+   "Takes a set of functions and returns a fn that is the composition\n  of those fns.  The returned fn takes a variable number of args,\n  applies the rightmost of fns to the args, the next\n  fn (right-to-left) to the result, etc.",
+   :href "/clojure.core/comp"}
+  {:name "conj",
+   :ns "clojure.core",
+   :other-ns [],
+   :arglists ["" "coll" "coll x" "coll x & xs"],
+   :doc
+   "conj[oin]. Returns a new collection with the xs\n    'added'. (conj nil item) returns (item).\n    (conj coll) returns coll. (conj) returns [].\n    The 'addition' may happen at different 'places' depending\n    on the concrete type.",
+   :href "/clojure.core/conj"}
+  {:name "cons",
+   :ns "clojure.core",
+   :other-ns [],
+   :arglists ["x seq"],
+   :doc "Returns a new seq where x is the first element and seq is\n    the rest.",
+   :href "/clojure.core/cons"}
+  {:name "copy",
+   :ns "clojure.java.io",
+   :other-ns [],
+   :arglists ["input output & opts"],
+   :doc
+   "Copies input to output.  Returns nil or throws IOException.\n  Input may be an InputStream, Reader, File, byte[], char[], or String.\n  Output may be an OutputStream, Writer, or File.\n\n  Options are key/value pairs and may be one of\n\n    :buffer-size  buffer size to use, default is 1024.\n    :encoding     encoding to use if converting between\n                  byte and char streams.   \n\n  Does not close any streams except those it opens itself \n  (on a File).",
+   :href "/clojure.java.io/copy"}
+  {:name "cosh",
+   :ns "clojure.math",
+   :other-ns [],
+   :arglists ["x"],
+   :doc
+   "Returns the hyperbolic cosine of x, (e^x + e^-x)/2.\n  If x is ##NaN => ##NaN\n  If x is ##Inf or ##-Inf => ##Inf\n  If x is zero => 1.0\n  See: https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html#cosh-double-",
+   :href "/clojure.math/cosh"}
+  {:name "diff",
+   :ns "clojure.data",
+   :other-ns [],
+   :arglists ["a b"],
+   :doc
+   "Recursively compares a and b, returning a tuple of\n  [things-only-in-a things-only-in-b things-in-both].\n  Comparison rules:\n\n  * For equal a and b, return [nil nil a].\n  * Maps are subdiffed where keys match and values differ.\n  * Sets are never subdiffed.\n  * All sequential things are treated as associative collections\n    by their indexes, with results returned as vectors.\n  * Everything else (including strings!) is treated as\n    an atom and compared for equality.",
+   :href "/clojure.data/diff"}
+  {:name "disj",
+   :ns "clojure.core",
+   :other-ns [],
+   :arglists ["set" "set key" "set key & ks"],
+   :doc "disj[oin]. Returns a new set of the same (hashed/sorted) type, that\n  does not contain key(s).",
+   :href "/clojure.core/disj"}
+  {:name "domc",
+   :ns "clojure.core.logic.fd",
+   :other-ns [],
+   :arglists ["x"],
+   :doc "",
+   :href "/clojure.core.logic.fd/domc"}
+  {:name "down",
+   :ns "clojure.zip",
+   :other-ns [],
+   :arglists ["loc"],
+   :doc "Returns the loc of the leftmost child of the node at this loc, or\n  nil if no children",
+   :href "/clojure.zip/down"}
+  {:name "drop",
+   :ns "clojure.core",
+   :other-ns ["clojure.core.reducers"],
+   :arglists ["n" "n coll"],
+   :doc
+   "Returns a laziness-preserving sequence of all but the first n items in coll.\n  Returns a stateful transducer when no collection is provided.",
+   :href "/clojure.core/drop"}
+  {:name "edit",
+   :ns "clojure.zip",
+   :other-ns [],
+   :arglists ["loc f & args"],
+   :doc "Replaces the node at this loc with the value of (f node args)",
+   :href "/clojure.zip/edit"}
+  {:name "emit", :ns "clojure.xml", :other-ns [], :arglists ["x"], :doc "", :href "/clojure.xml/emit"}
+  {:name "eval",
+   :ns "clojure.core",
+   :other-ns [],
+   :arglists ["form"],
+   :doc "Evaluates the form data structure (not text!) and returns the result.",
+   :href "/clojure.core/eval"}
+  {:name "exec",
+   :ns "clojure.java.process",
+   :other-ns [],
+   :arglists ["& opts+args"],
+   :doc
+   "Execute a command and on successful exit, return the captured output,\n  else throw RuntimeException. Args are the same as 'start' and options\n  if supplied override the default 'exec' settings.",
+   :href "/clojure.java.process/exec"}
+  {:name "fail",
+   :ns "clojure.core.logic",
+   :other-ns [],
+   :arglists ["a"],
+   :doc "A goal that always fails.",
+   :href "/clojure.core.logic/fail"}
+  {:name "file",
+   :ns "clojure.java.io",
+   :other-ns [],
+   :arglists ["arg" "parent child" "parent child & more"],
+   :doc
+   "Returns a java.io.File, passing each arg to as-file.  Multiple-arg\n   versions treat the first argument as parent and subsequent args as\n   children relative to the parent.",
+   :href "/clojure.java.io/file"}
+  {:name "find",
+   :ns "clojure.core",
+   :other-ns [],
+   :arglists ["map key"],
+   :doc "Returns the map entry for key, or nil if key not present.",
+   :href "/clojure.core/find"}
+  {:name "fixc",
+   :ns "clojure.core.logic",
+   :other-ns [],
+   :arglists ["x f reifier" "x f runnable reifier"],
+   :doc "",
+   :href "/clojure.core.logic/fixc"}
+  {:name "fnil",
+   :ns "clojure.core",
+   :other-ns [],
+   :arglists ["f x" "f x y" "f x y z"],
+   :doc
+   "Takes a function f, and returns a function that calls f, replacing\n  a nil first argument to f with the supplied value x. Higher arity\n  versions can replace arguments in the second and third\n  positions (y, z). Note that the function f can take any number of\n  arguments, not just the one(s) being nil-patched.",
+   :href "/clojure.core/fnil"}
+  {:name "fold",
+   :ns "clojure.core.reducers",
+   :other-ns [],
+   :arglists ["reducef coll" "combinef reducef coll" "n combinef reducef coll"],
+   :doc
+   "Reduces a collection using a (potentially parallel) reduce-combine\n  strategy. The collection is partitioned into groups of approximately\n  n (default 512), each of which is reduced with reducef (with a seed\n  value obtained by calling (combinef) with no arguments). The results\n  of these reductions are then reduced with combinef (default\n  reducef). combinef must be associative, and, when called with no\n  arguments, (combinef) must produce its identity element. These\n  operations may be performed in parallel, but the results will\n  preserve order.",
+   :href "/clojure.core.reducers/fold"}
+  {:name "form",
+   :ns "clojure.spec.alpha",
+   :other-ns [],
+   :arglists ["spec"],
+   :doc "returns the spec as data",
+   :href "/clojure.spec.alpha/form"}
+  {:name "hash",
+   :ns "clojure.core",
+   :other-ns [],
+   :arglists ["x"],
+   :doc
+   "Returns the hash code of its argument. Note this is the hash code\n  consistent with =, and thus is different than .hashCode for Integer,\n  Short, Byte and Clojure collections.",
+   :href "/clojure.core/hash"}
+  {:name "into",
+   :ns "clojure.core",
+   :other-ns ["clojure.core.async"],
+   :arglists ["" "to" "to from" "to xform from"],
+   :doc
+   "Returns a new coll consisting of to with all of the items of\n  from conjoined. A transducer may be supplied.\n  (into x) returns x. (into) returns [].",
+   :href "/clojure.core/into"}
+  {:name "ints",
+   :ns "clojure.core",
+   :other-ns [],
+   :arglists ["xs"],
+   :doc "Casts to int[]",
+   :href "/clojure.core/ints"}
+  {:name "join",
+   :ns "clojure.set",
+   :other-ns ["clojure.string"],
+   :arglists ["xrel yrel" "xrel yrel km"],
+   :doc
+   "When passed 2 rels, returns the rel corresponding to the natural\n  join. When passed an additional keymap, joins on the corresponding\n  keys.",
+   :href "/clojure.set/join"}
+  {:name "juxt",
+   :ns "clojure.core",
+   :other-ns [],
+   :arglists ["f" "f g" "f g h" "f g h & fs"],
+   :doc
+   "Takes a set of functions and returns a fn that is the juxtaposition\n  of those fns.  The returned fn takes a variable number of args, and\n  returns a vector containing the result of applying each fn to the\n  args (left-to-right).\n  ((juxt a b c) x) => [(a x) (b x) (c x)]",
+   :href "/clojure.core/juxt"}
+  {:name "keep",
+   :ns "clojure.core",
+   :other-ns [],
+   :arglists ["f" "f coll"],
+   :doc
+   "Returns a lazy sequence of the non-nil results of (f item). Note,\n  this means false return values will be included.  f must be free of\n  side-effects.  Returns a transducer when no collection is provided.",
+   :href "/clojure.core/keep"}
+  {:name "keys",
+   :ns "clojure.core",
+   :other-ns [],
+   :arglists ["map"],
+   :doc "Returns a sequence of the map's keys, in the same order as (seq map).",
+   :href "/clojure.core/keys"}
+  {:name "last",
+   :ns "clojure.core",
+   :other-ns [],
+   :arglists ["coll"],
+   :doc "Return the last item in coll, in linear time",
+   :href "/clojure.core/last"}
+  {:name "left",
+   :ns "clojure.zip",
+   :other-ns [],
+   :arglists ["loc"],
+   :doc "Returns the loc of the left sibling of the node at this loc, or nil",
+   :href "/clojure.zip/left"}
+  {:name "list",
+   :ns "clojure.core",
+   :other-ns [],
+   :arglists ["& items"],
+   :doc "Creates a new list containing the items.",
+   :href "/clojure.core/list"}
+  {:name "load",
+   :ns "clojure.core",
+   :other-ns [],
+   :arglists ["& paths"],
+   :doc
+   "Loads Clojure code from resources in classpath. A path is interpreted as\n  classpath-relative if it begins with a slash or relative to the root\n  directory for the current namespace otherwise.",
+   :href "/clojure.core/load"}
+  {:name "long",
+   :ns "clojure.core",
+   :other-ns [],
+   :arglists ["x"],
+   :doc "Coerce to long",
+   :href "/clojure.core/long"}
+  {:name "lvar",
+   :ns "clojure.core.logic",
+   :other-ns [],
+   :arglists ["" "name" "name unique"],
+   :doc "",
+   :href "/clojure.core.logic/lvar"}
+  {:name "main",
+   :ns "clojure.main",
+   :other-ns [],
+   :arglists ["& args"],
+   :doc
+   "Usage: java -cp clojure.jar clojure.main [init-opt*] [main-opt] [arg*]\n\n  With no options or args, runs an interactive Read-Eval-Print Loop\n\n  init options:\n    -i, --init path     Load a file or resource\n    -e, --eval string   Evaluate expressions in string; print non-nil values\n    --report target     Report uncaught exception to \"file\" (default), \"stderr\",\n                        or \"none\", overrides System property clojure.main.report\n\n  main options:\n    -m, --main ns-name  Call the -main function from a namespace with args\n    -r, --repl          Run a repl\n    path                Run a script from a file or resource\n    -                   Run a script from standard input\n    -h, -?, --help      Print this help message and exit\n\n  operation:\n\n    - Establishes thread-local bindings for commonly set!-able vars\n    - Enters the user namespace\n    - Binds *command-line-args* to a seq of strings containing command line\n      args that appear after any main option\n    - Runs all init options in order\n    - Calls a -main function or runs a repl or script if requested\n\n  The init options may be repeated and mixed freely, but must appear before\n  any main option. The appearance of any eval option before running a repl\n  suppresses the usual repl greeting message: \"Clojure ~(clojure-version)\".\n\n  Paths may be absolute or relative in the filesystem or relative to\n  classpath. Classpath-relative paths have prefix of @ or @/",
+   :href "/clojure.main/main"}
+  {:name "mapv",
+   :ns "clojure.core",
+   :other-ns [],
+   :arglists ["f coll" "f c1 c2" "f c1 c2 c3" "f c1 c2 c3 & colls"],
+   :doc
+   "Returns a vector consisting of the result of applying f to the\n  set of first items of each coll, followed by applying f to the set\n  of second items in each coll, until any one of the colls is\n  exhausted.  Any remaining items in other colls are ignored. Function\n  f should accept number-of-colls arguments.",
+   :href "/clojure.core/mapv"}
+  {:name "meta",
+   :ns "clojure.core",
+   :other-ns [],
+   :arglists ["obj"],
+   :doc "Returns the metadata of obj, returns nil if there is no metadata.",
+   :href "/clojure.core/meta"}
+  {:name "mult",
+   :ns "clojure.core.async",
+   :other-ns [],
+   :arglists ["ch"],
+   :doc
+   "Creates and returns a mult(iple) of the supplied channel. Channels\n  containing copies of the channel can be created with 'tap', and\n  detached with 'untap'.\n\n  Each item is distributed to all taps in parallel and synchronously,\n  i.e. each tap must accept before the next item is distributed. Use\n  buffering/windowing to prevent slow taps from holding up the mult.\n\n  Items received when there are no taps get dropped.\n\n  If a tap puts to a closed channel, it will be removed from the mult.",
+   :href "/clojure.core.async/mult"}
+  {:name "nafc",
+   :ns "clojure.core.logic",
+   :other-ns [],
+   :arglists ["c & args"],
+   :doc
+   "EXPERIMENTAL: negation as failure constraint. All arguments to the goal c\n   must be ground. If some argument is not ground the execution of this constraint\n   will be delayed.",
+   :href "/clojure.core.logic/nafc"}
+  {:name "name",
+   :ns "clojure.core",
+   :other-ns [],
+   :arglists ["x"],
+   :doc "Returns the name String of a string, symbol or keyword.",
+   :href "/clojure.core/name"}
+  {:name "next",
+   :ns "clojure.core",
+   :other-ns ["clojure.zip"],
+   :arglists ["coll"],
+   :doc
+   "Returns a seq of the items after the first. Calls seq on its\n  argument.  If there are no more items, returns nil.",
+   :href "/clojure.core/next"}
+  {:name "nilo",
+   :ns "clojure.core.logic",
+   :other-ns [],
+   :arglists ["a"],
+   :doc "A relation where a is nil",
+   :href "/clojure.core.logic/nilo"}
+  {:name "node",
+   :ns "clojure.zip",
+   :other-ns [],
+   :arglists ["loc"],
+   :doc "Returns the node at loc",
+   :href "/clojure.zip/node"}
+  {:name "path",
+   :ns "clojure.zip",
+   :other-ns [],
+   :arglists ["loc"],
+   :doc "Returns a seq of nodes leading to this loc",
+   :href "/clojure.zip/path"}
+  {:name "peek",
+   :ns "clojure.core",
+   :other-ns [],
+   :arglists ["coll"],
+   :doc
+   "For a list or queue, same as first, for a vector, same as, but much\n  more efficient than, last. If the collection is empty, returns nil.",
+   :href "/clojure.core/peek"}
+  {:name "pipe",
+   :ns "clojure.core.async",
+   :other-ns [],
+   :arglists ["from to" "from to close?"],
+   :doc
+   "Takes elements from the from channel and supplies them to the to\n  channel. By default, the to channel will be closed when the from\n  channel closes, but can be determined by the close?  parameter. Will\n  stop consuming the from channel if the to channel closes",
+   :href "/clojure.core.async/pipe"}
+  {:name "pmap",
+   :ns "clojure.core",
+   :other-ns [],
+   :arglists ["f coll" "f coll & colls"],
+   :doc
+   "Like map, except f is applied in parallel. Semi-lazy in that the\n  parallel computation stays ahead of the consumption, but doesn't\n  realize the entire result unless required. Only useful for\n  computationally intensive functions where the time of f dominates\n  the coordination overhead.",
+   :href "/clojure.core/pmap"}
+  {:name "prev",
+   :ns "clojure.zip",
+   :other-ns [],
+   :arglists ["loc"],
+   :doc "Moves to the previous loc in the hierarchy, depth-first. If already\n  at the root, returns nil.",
+   :href "/clojure.zip/prev"}
+  {:name "quot",
+   :ns "clojure.core",
+   :other-ns ["clojure.core.logic.fd"],
+   :arglists ["num div"],
+   :doc "quot[ient] of dividing numerator by denominator.",
+   :href "/clojure.core/quot"}
+  {:name "rand",
+   :ns "clojure.core",
+   :other-ns [],
+   :arglists ["" "n"],
+   :doc "Returns a random floating point number between 0 (inclusive) and\n  n (default 1) (exclusive).",
+   :href "/clojure.core/rand"}
+  {:name "read",
+   :ns "clojure.core",
+   :other-ns ["clojure.edn"],
+   :arglists
+   ["" "stream" "stream eof-error? eof-value" "stream eof-error? eof-value recursive?" "opts stream"],
+   :doc
+   "Reads the next object from stream, which must be an instance of\n  java.io.PushbackReader or some derivee.  stream defaults to the\n  current value of *in*.\n\n  Opts is a persistent map with valid keys:\n    :read-cond - :allow to process reader conditionals, or\n                 :preserve to keep all branches\n    :features - persistent set of feature keywords for reader conditionals\n    :eof - on eof, return value unless :eofthrow, then throw.\n           if not specified, will throw\n\n  Note that read can execute code (controlled by *read-eval*),\n  and as such should be used only with trusted sources.\n\n  For data structure interop use clojure.edn/read",
+   :href "/clojure.core/read"}
+  {:name "repl",
+   :ns "clojure.core.server",
+   :other-ns ["clojure.main"],
+   :arglists [""],
+   :doc "REPL with predefined hooks for attachable socket server.",
+   :href "/clojure.core.server/repl"}
+  {:name "rest",
+   :ns "clojure.core",
+   :other-ns [],
+   :arglists ["coll"],
+   :doc "Returns a possibly empty seq of the items after the first. Calls seq on its\n  argument.",
+   :href "/clojure.core/rest"}
+  {:name "rint",
+   :ns "clojure.math",
+   :other-ns [],
+   :arglists ["a"],
+   :doc
+   "Returns the double closest to a and equal to a mathematical integer.\n  If two values are equally close, return the even one.\n  If a is ##NaN or ##Inf or ##-Inf or zero => a\n  See: https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html#rint-double-",
+   :href "/clojure.math/rint"}
+  {:name "root",
+   :ns "clojure.zip",
+   :other-ns [],
+   :arglists ["loc"],
+   :doc "zips all the way up and returns the root node, reflecting any\n changes.",
+   :href "/clojure.zip/root"}
+  {:name "rseq",
+   :ns "clojure.core",
+   :other-ns [],
+   :arglists ["rev"],
+   :doc
+   "Returns, in constant time, a seq of the items in rev (which\n  can be a vector or sorted-map), in reverse order. If rev is empty returns nil",
+   :href "/clojure.core/rseq"}
+  {:name "send",
+   :ns "clojure.core",
+   :other-ns [],
+   :arglists ["a f & args"],
+   :doc
+   "Dispatch an action to an agent. Returns the agent immediately.\n  Subsequently, in a thread from a thread pool, the state of the agent\n  will be set to the value of:\n\n  (apply action-fn state-of-agent args)",
+   :href "/clojure.core/send"}
+  {:name "seqc",
+   :ns "clojure.core.logic",
+   :other-ns [],
+   :arglists ["v"],
+   :doc "",
+   :href "/clojure.core.logic/seqc"}
+  {:name "sinh",
+   :ns "clojure.math",
+   :other-ns [],
+   :arglists ["x"],
+   :doc
+   "Returns the hyperbolic sine of x, (e^x - e^-x)/2.\n  If x is ##NaN => ##NaN\n  If x is ##Inf or ##-Inf or zero => x\n  See: https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html#sinh-double-",
+   :href "/clojure.math/sinh"}
+  {:name "some",
+   :ns "clojure.core",
+   :other-ns [],
+   :arglists ["pred coll"],
+   :doc
+   "Returns the first logical true value of (pred x) for any x in coll,\n  else nil.  One common idiom is to use a set as pred, for example\n  this will return :fred if :fred is in the sequence, otherwise nil:\n  (some #{:fred} coll)",
+   :href "/clojure.core/some"}
+  {:name "sort",
+   :ns "clojure.core",
+   :other-ns [],
+   :arglists ["coll" "comp coll"],
+   :doc
+   "Returns a sorted sequence of the items in coll. If no comparator is\n  supplied, uses compare.  comparator must implement\n  java.util.Comparator.  Guaranteed to be stable: equal elements will\n  not be reordered.  If coll is a Java array, it will be modified.  To\n  avoid this, sort a copy of the array.",
+   :href "/clojure.core/sort"}
+  {:name "spit",
+   :ns "clojure.core",
+   :other-ns [],
+   :arglists ["f content & options"],
+   :doc
+   "Opposite of slurp.  Opens f with writer, writes content, then\n  closes f. Options passed to clojure.java.io/writer.",
+   :href "/clojure.core/spit"}
+  {:name "sqrt",
+   :ns "clojure.math",
+   :other-ns [],
+   :arglists ["a"],
+   :doc
+   "Returns the positive square root of a.\n  If a is ##NaN or negative => ##NaN\n  If a is ##Inf => ##Inf\n  If a is zero => a\n  See: https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html#sqrt-double-",
+   :href "/clojure.math/sqrt"}
+  {:name "subs",
+   :ns "clojure.core",
+   :other-ns [],
+   :arglists ["s start" "s start end"],
+   :doc
+   "Returns the substring of s beginning at start inclusive, and ending\n  at end (defaults to length of string), exclusive.",
+   :href "/clojure.core/subs"}
+  {:name "take",
+   :ns "clojure.core",
+   :other-ns ["clojure.core.async" "clojure.core.reducers"],
+   :arglists ["n" "n coll"],
+   :doc
+   "Returns a lazy sequence of the first n items in coll, or all items if\n  there are fewer than n.  Returns a stateful transducer when\n  no collection is provided.",
+   :href "/clojure.core/take"}
+  {:name "tanh",
+   :ns "clojure.math",
+   :other-ns [],
+   :arglists ["x"],
+   :doc
+   "Returns the hyperbolic tangent of x, sinh(x)/cosh(x).\n  If x is ##NaN => ##NaN\n  If x is zero => zero, with same sign\n  If x is ##Inf => +1.0\n  If x is ##-Inf => -1.0\n  See: https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html#tanh-double-",
+   :href "/clojure.math/tanh"}
+  {:name "test",
+   :ns "clojure.core",
+   :other-ns [],
+   :arglists ["v"],
+   :doc
+   "test [v] finds fn at key :test in var metadata and calls it,\n  presuming failure will throw exception",
+   :href "/clojure.core/test"}
+  {:name "trim",
+   :ns "clojure.string",
+   :other-ns [],
+   :arglists ["s"],
+   :doc "Removes whitespace from both ends of string.",
+   :href "/clojure.string/trim"}
+  {:name "type",
+   :ns "clojure.core",
+   :other-ns [],
+   :arglists ["x"],
+   :doc "Returns the :type metadata of x, or its Class if none",
+   :href "/clojure.core/type"}
+  {:name "uber",
+   :ns "clojure.tools.build.api",
+   :other-ns [],
+   :arglists ["params"],
+   :doc
+   "Create uberjar file. An uberjar is a self-contained jar file containing\n  both the project contents AND the contents of all dependencies.\n\n  The project contents are represented by the class-dir. Use other tasks to\n  put Clojure source, class files, a pom file, or other resources in the\n  class-dir. In particular, see the copy-dir, write-pom, compile-clj, and\n  javac tasks.\n\n  The dependencies are pulled from the basis. All transitive deps will be\n  included. Dependency jars are expanded for inclusion in the uberjar.\n  Use :exclude to exclude specific paths from the expanded deps. Use\n  conflict-handlers to handle conflicts that may occur if two dependency\n  jar files include a file at the same path. See below for more detail.\n\n  If a main class or manifest are provided, those are put in the uberjar\n  META-INF/MANIFEST.MF file. Providing a main allows the jar to be\n  invoked with java -jar.\n\n  Returns nil.\n\n  Options:\n    :uber-file - required, uber jar file to create\n    :class-dir - required, local class dir to include\n    :basis - used to pull dep jars\n    :main - main class symbol\n    :manifest - map of manifest attributes, merged last over defaults + :main\n    :exclude - coll of string patterns (regex) to exclude from deps\n    :conflict-handlers - map of string pattern (regex) to built-in handlers,\n                         symbols to eval, or function instances\n\n  When combining jar files into an uber jar, multiple jars may contain a file\n  at the same path. The conflict handlers are a map of string regex pattern\n  to:\n    a keyword (to use a built-in handler) or\n    a symbol (to resolve and invoke) or\n    a function instance\n  The special key `:default` specifies the default behavior if not matched.\n\n  Conflict handler signature (fn [params]) => effect-map:\n    params:\n      :path     - String, path in uber jar, matched by regex\n      :in       - InputStream to incoming file (see stream->string if needed)\n      :existing - File, existing File at path\n      :lib      - symbol, lib source for incoming conflict\n      :state    - map, available for retaining state during uberjar process\n\n  Handler should return effect-map with optional keys:\n    :state      - updated state map\n    :write      - map of string path to map of :string (string) or\n                  :stream (InputStream) to write and optional :append\n                  flag. Omit if no files to write.\n\n  Available built-in conflict handlers:\n    :ignore - don't do anything (default)\n    :overwrite - overwrite (replaces prior file)\n    :append - append the file with a blank line separator\n    :append-dedupe - append the file but dedupe appended sections\n    :data-readers - merge data_readers.clj\n    :warn - print a warning\n    :error - throw an error\n\n  Default conflict handlers map:\n    {\"^data_readers.clj[c]?$\" :data-readers\n     \"^META-INF/services/.*\" :append\n     \"(?i)^(META-INF/)?(COPYRIGHT|NOTICE|LICENSE)(\\\\.(txt|md))?$\" :append-dedupe\n     :default :ignore}",
+   :href "/clojure.tools.build.api/uber"}
+  {:name "vals",
+   :ns "clojure.core",
+   :other-ns [],
+   :arglists ["map"],
+   :doc "Returns a sequence of the map's values, in the same order as (seq map).",
+   :href "/clojure.core/vals"}
+  {:name "walk",
+   :ns "clojure.walk",
+   :other-ns [],
+   :arglists ["inner outer form"],
+   :doc
+   "Traverses form, an arbitrary data structure.  inner and outer are\n  functions.  Applies inner to each element of form, building up a\n  data structure of the same type, then applies outer to the result.\n  Recognizes all Clojure data structures. Consumes seqs as with doall.",
+   :href "/clojure.walk/walk"}],
+ :non-functions
+ {"amap" :macro,
+  "case" :macro,
+  "cond" :macro,
+  "defn" :macro,
+  "doto" :macro,
+  "fdef" :macro,
+  "loop" :macro,
+  "pair" :mismatch,
+  "pool" :value,
+  "pred" :macro,
+  "spec" :macro,
+  "sync" :macro,
+  "time" :macro,
+  "when" :macro}}

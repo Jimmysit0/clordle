@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en" data-theme="rose-pine">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>clordle - a Wordle of Clojure functions</title>
+  <meta name="description" content="Guess the Clojure function. Dictionary built from clojuredocs.org.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700;800&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    try {
+      var t = (localStorage.getItem("clordle/theme") || "").replace(/"/g, "");
+      if (!t || t === "system") t = matchMedia("(prefers-color-scheme: light)").matches ? "dawn" : "rose-pine";
+      document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <div id="app"><div class="loading">loading...</div></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/react@18.3.1/umd/react.production.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/scittle@0.8.33/dist/scittle.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/scittle@0.8.33/dist/scittle.reagent.js"></script>
+  <script type="application/x-scittle" src="clordle.cljs"></script>
+</body>
+</html>

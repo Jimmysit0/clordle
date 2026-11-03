@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- clordle: a "correct" tile between parens, in Rosé Pine (base, iris, rose, pine). -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#26233a"/>
+      <stop offset="1" stop-color="#191724"/>
+    </linearGradient>
+  </defs>
+  <rect x="0.5" y="0.5" width="31" height="31" rx="8" fill="url(#bg)" stroke="#403d52"/>
+  <path d="M9.4 6.2C5.3 10.7 5.3 21.3 9.4 25.8" fill="none" stroke="#c4a7e7" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M22.6 6.2C26.7 10.7 26.7 21.3 22.6 25.8" fill="none" stroke="#ebbcba" stroke-width="2.6" stroke-linecap="round"/>
+  <rect x="10.5" y="10.5" width="11" height="11" rx="2.8" fill="#31748f"/>
+</svg>
